@@ -29,4 +29,4 @@ def to_bytes(bytes_or_str):
     return value
  ```
 
-* In Python3, `bytes` or `str` are never equivalent. Not even empty string
+* In Python3, `bytes` or `str` are never equivalent. Not even empty string. `open()` default to `utf-8` encoding.
