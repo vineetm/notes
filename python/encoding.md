@@ -28,3 +28,5 @@ def to_bytes(bytes_or_str):
         value = bytes_or_str
     return value
  ```
+
+* In Python3, `bytes` or `str` are never equivalent. Not even empty string
