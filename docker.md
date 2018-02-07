@@ -9,8 +9,8 @@
    ```
    
  * Stop container
-  ```
-  docker container ls
-  docker container stop <cont_id>
-  ```
+    ```
+    docker container ls
+    docker container stop <cont_id>
+    ```
  
