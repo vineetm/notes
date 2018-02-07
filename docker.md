@@ -5,7 +5,7 @@
   
  * Run as daemon and map interal port 5000 to external port 5001:
    ```
-   docker run -d -p 5000:5000 sample:v1
+   docker run -d -p 5001:5000 sample:v1
    ```
    
  * Stop container
