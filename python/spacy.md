@@ -8,7 +8,7 @@ python -m spacy download en
 
 ```
 nlp = spacy.load('en')
-doc = nlp.make_doc(text)
+doc = nlp.tokenizer(text)
 
 sentence = ' '.join([token.text for token in doc])
 ```
