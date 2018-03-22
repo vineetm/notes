@@ -1,3 +1,9 @@
+### Install English Model
+
+```
+python -m spacy download en
+```
+
 ### Tokenization
 
 ```
