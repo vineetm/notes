@@ -1,0 +1,3 @@
+While running RNNs, running on a system with multiple threads causes a lot of difference in computation time.
+
+My guess is this occurs due to parallelization in while loop
