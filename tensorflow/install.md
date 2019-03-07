@@ -11,7 +11,7 @@
 
 * If on a GPU machine, install `tensorflow-gpu`
   ```
-  (py3tf) $ pip install tenorflow-gpu
+  (py3tf) $ pip install tensorflow-gpu
   ```
 
 * Following this you will also need to setup your `CUDA_HOME`. Put the following in your `~/.bashrc`
