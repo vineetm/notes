@@ -7,3 +7,7 @@
 ```bash
 find . -name "*.entities.json" -print0 | xargs -0 rm
 ```
+* Find size of a directory
+```bash
+du -sh file_path
+```
