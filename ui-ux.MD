@@ -7,3 +7,8 @@
 ## Setting-Up React
 1. [Install](https://nodejs.org/en/) node.js
 2. Create a [New React App](https://reactjs.org/docs/create-a-new-react-app.html)
+
+
+## Visual Studio Code, setup
+* ``Shift + Command + P`` and do `install code` ==> Needless to say, only needs to be done once!
+* Then go to folder and do `code .`
