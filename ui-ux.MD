@@ -12,3 +12,13 @@
 ## Visual Studio Code, setup
 * ``Shift + Command + P`` and do `install code` ==> Needless to say, only needs to be done once!
 * Then go to folder and do `code .`
+
+## Dev Server start
+```npm start```
+
+## Deployment Build
+```
+npm run build
+sudo npm i -g serve
+serve -s build -p 8000
+```
