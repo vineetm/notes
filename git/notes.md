@@ -8,3 +8,7 @@ Remote branch
 ```bash
 git branch -d <remote_name> <branch_name>
 ```
+
+```
+git push origin --delete new-sim-algo
+```
