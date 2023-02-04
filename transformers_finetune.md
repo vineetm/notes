@@ -53,3 +53,12 @@ target_encoding = tokenizer(
 labels = target_encoding.input_ids
 labels[labels == tokenizer.pad_token_id] = -100
 ```
+
+#### Computing loss
+```python
+loss = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels).loss
+print(loss.item())
+```
+
+* Why `item()`? `loss` is a tensor (with a single item) `item()` [converts it to a standard python number](https://pytorch.org/docs/stable/generated/torch.Tensor.item.html)
+
