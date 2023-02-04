@@ -1,4 +1,6 @@
 ### Finetuning a flan-t5 model
+
+#### Source inputs needed: `input_ids` and `attention_mask`
 Based on Huggingface training T5 [Doc](https://huggingface.co/docs/transformers/model_doc/t5#training)
 ```python
 from transformers import AutoTokenizer, AutoModelforSeq2SeqLM
@@ -34,3 +36,20 @@ input_ids, attention_mask = encoding.input_ids, encoding.attention_mask
 
 * `input_ids` is padded with pad tokens. In this case `token_id=0`. We can find this by checking `tokenizer.pad_token_id`
 * `input_ids` always ends with `end` (in this case `token_id=1`)
+
+#### Target inputs needed `labels`
+* HF automatically constructs `target_input_ids` from labels
+* However, it does not ignore **padded** labels! Why?
+* Thus, we need to manually set all padded labels to `-100` which is special ignore index in pytorch (and tensorflow?)
+
+```python
+target_encoding = tokenizer(
+    [output_sequence_1, output_sequence_2],
+    padding="longest",
+    max_length=max_target_length,
+    truncation=True,
+    return_tensors="pt",
+)
+labels = target_encoding.input_ids
+labels[labels == tokenizer.pad_token_id] = -100
+```
