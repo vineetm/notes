@@ -10,3 +10,8 @@
   ```bash
   conda env remove -n py3tf
   ```
+* Clone an existing environment
+
+```bash
+conda create --name myclone --clone myenv
+```
